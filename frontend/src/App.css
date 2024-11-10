@@ -1,38 +1,162 @@
+/* App.css */
 .App {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(to right, #9b59b6, #8e44ad); /* Purple gradient */
+  min-height: 100vh;
+  color: white;
+  padding: 30px;
+  transition: background 0.5s ease;
+}
+
+.container {
+  display: flex;
+  flex-direction: column; /* Stack vertically */
+  width: 100%;
+  max-width: 1200px;
+  gap: 40px;
+}
+
+.left-column,
+.right-column {
+  width: 100%; /* Full width for both columns */
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #ffffff;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+form {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.2
+  ); /* Semi-transparent form background */
+  padding: 20px;
+  border-radius: 15px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+input[type="email"],
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 12px 0;
+  border: none;
+  border-radius: 8px;
+  background-color: rgba(0, 255, 0, 0.3); /* Green background */
+  color: white;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+input[type="email"]:focus,
+input[type="text"]:focus,
+textarea:focus {
+  background-color: rgba(0, 255, 0, 0.5); /* Darker green on focus */
+  outline: none;
+}
+
+button {
+  padding: 12px 24px;
+  background-color: #00c6ff;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 1.1rem;
+  cursor: pointer;
+  width: 100%;
+  box-shadow: 0px 0px 15px rgba(0, 194, 255, 0.6);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff5722;
+  box-shadow: 0px 0px 25px rgba(255, 87, 34, 0.8);
+}
+
+.error-message {
+  color: red;
+  font-size: 1.1rem;
+  margin-top: 10px;
+}
+
+hr {
+  margin: 30px 0;
+  width: 100%;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background-color: rgba(255, 0, 0, 0.7); /* Red background for reports */
+  margin: 15px 0;
+  padding: 20px;
+  border-radius: 15px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+  transition: background-color 0.3s ease;
+  width: 100%; /* Ensure full width for the report block */
+  word-wrap: break-word; /* Allow wrapping for long hashes */
+  overflow-wrap: break-word; /* Prevent overflow of long text */
+}
+
+li:hover {
+  background-color: rgba(255, 0, 0, 0.9); /* Red hover effect */
+}
+
+.reports-list {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.report-card {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  margin: 15px 0;
+  padding: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.report-title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.report-description {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.report-hash {
+  font-size: 0.9rem;
+  color: #80d0ff;
+  word-wrap: break-word;
+  white-space: normal; /* Allow wrapping */
+  overflow-wrap: break-word; /* Allow wrapping for long tx hashes */
+}
+
+button:hover {
+  background-color: #ff5722;
 }

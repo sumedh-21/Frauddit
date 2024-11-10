@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import "../App.css"; // Ensure CSS is imported for styling
 
 function ReportForm() {
   const [fraudType, setFraudType] = useState("");
@@ -45,7 +46,7 @@ function ReportForm() {
       </form>
 
       {/* Display error message */}
-      {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
+      {errorMessage && <p className="error-message">{errorMessage}</p>}
     </div>
   );
 }

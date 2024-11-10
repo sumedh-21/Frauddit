@@ -4,6 +4,8 @@ const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const { Server } = require("socket.io");
 const { Web3, HttpProvider } = require("web3");
+const routes = require("./routes");
+const User = require("./models/Users");
 const contractABI =
   require("../blockchain/build/contracts/FraudReport.json").abi;
 
@@ -27,6 +29,7 @@ const contractAddress = "0x68b76828162448d83C9536A11B7DD165A0bDc0C4";
 const FraudReport = new web3.eth.Contract(contractABI, contractAddress);
 
 app.use(express.json());
+app.use("/api", routes);
 
 // Connect to MongoDB
 mongoose
@@ -52,6 +55,8 @@ app.post("/report", async (req, res) => {
   const { fraudType, description } = req.body;
 
   try {
+    console.log("Received Report:", fraudType, description); // Debug log
+
     // Step 1: Check if the report already exists on the blockchain
     const reportExists = await FraudReport.methods
       .reportExists(fraudType, description)

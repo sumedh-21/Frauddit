@@ -4,6 +4,7 @@ Frauddit addresses the increasing problem of online fraud by creating a decentra
 It allows users to report fraud incidents, view real-time reports, and receive notifications on new fraud cases. By leveraging blockchain technology, it ensures that the reports are immutable, transparent, and accessible to everyone. The platform integrates decentralized principles with real-time alerting, making it easier for users to stay informed and protect themselves from potential fraud.
 
 Key Features:
+
 Real-Time Fraud Reporting: Users can quickly submit fraud reports.
 
 Decentralized Database: Using blockchain for storing and verifying fraud reports to ensure transparency and immutability.
@@ -13,7 +14,9 @@ Real-Time Notifications: Users get notified about new fraud incidents as they ar
 Community-Driven: Users are empowered to report fraud without relying on centralized institutions.
 
 Tech Stack:
+
 Frontend:
+
 React: For building the user interface and handling user interactions.
 
 Axios: For making API requests to the backend.
@@ -23,6 +26,7 @@ React Router: For handling navigation between pages (Sign Up, Sign In, Report Fo
 Socket.io: For real-time updates and notifications of new fraud reports.
 
 Backend:
+
 Node.js: The runtime environment for building the backend.
 
 Express.js: For handling HTTP requests and building the API endpoints.
@@ -39,3 +43,6 @@ Smart Contracts: To validate and store fraud reports immutably on the blockchain
 
 Conclusion:
 Frauddit combines the power of decentralized technology with real-time alerts to provide a community-driven platform that enables users to combat fraud efficiently. With its simple user interface and transparent reporting mechanism, Frauddit is poised to make the internet a safer space for everyone.
+
+Video:
+youtu.be/Mu4bSNGtNVg
